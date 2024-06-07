@@ -1,0 +1,11 @@
+{
+  "name": "react-todo-app",
+  "version": "1.0.0",
+  "description": "TODO app to management task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Camilo",
+  "license": "MIT"
+}
