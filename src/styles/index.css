@@ -1,13 +1,30 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+/* universal properties*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* setting rem measuare */
+html {
+  font-size: 62.5%;
+  background-color: black;
+}
+
+body {
+    color: white;
+    font-family: "Share Tech", Helvetica, sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#root {
+  margin-top: 5rem;
+  position: relative;
+  background-color: #1D1D1F;
+  border-radius: 1.5rem;
+  width: 50rem;
+  min-height: 50rem;
+  align-content: center;
 }

@@ -1,7 +1,12 @@
+import '../styles/TodoSearch.css';
+
 function TodoSearch() {
   return (
-    <input placeholder="Learn React.js" />
+    <input
+      placeholder="Learn React.js"
+      className='TodoSearch'
+    />
   );
 }
 
-export { TodoSearch }
+export { TodoSearch };

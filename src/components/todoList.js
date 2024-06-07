@@ -1,3 +1,5 @@
+import '../styles/TodoList.css';
+
 function TodoList({ children }) {
   return (
     <ul>
@@ -6,4 +8,4 @@ function TodoList({ children }) {
   );
 }
 
-export { TodoList }
+export { TodoList };

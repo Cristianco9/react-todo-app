@@ -1,11 +1,18 @@
-import '../styles/todoCounter.css';
+import PropTypes from 'prop-types';
+import '../styles/TodoCounter.css';
 
 function TodoCounter({ total, completed }) {
   return (
-    <h1>
-      You Has been completed {completed} of {total} TODOs
+    <h1 className="TodoCounter">
+      You Has been completed <span>{completed} </span>
+      of <span>{total}</span> TODOs
     </h1>
-  )
+  );
 }
 
-export { TodoCounter }
+TodoCounter.propTypes = {
+  total: PropTypes.number.isRequired,
+  completed: PropTypes.number.isRequired
+};
+
+export { TodoCounter };
