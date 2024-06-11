@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../styles/TodoCounter.css';
+import '../styles/todoCounter.css';
 
 function TodoCounter({ total, completed }) {
   return (

@@ -1,8 +1,15 @@
-import '../styles/CreateTodoButton.css';
+import '../styles/createTodoButton.css';
 
 function CreateTodoButton() {
   return (
-    <button className="createTodoButton">+</button>
+    <button
+      className="createTodoButton"
+      onClick={
+        (/*event*/) => {
+
+        }
+      }
+    >+</button>
   );
 }
 
