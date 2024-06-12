@@ -1,12 +1,20 @@
 import { TodoIcon } from './todoIcon';
+import PropTypes from 'prop-types';
 
-function DeleteIcon() {
+function DeleteIcon({ completed, onDelete }) {
   return (
     <TodoIcon
       type = 'delete'
-      color = 'gray'
+      color={completed ? 'green' : 'gray'}
+      onClick={onDelete}
     />
   );
 }
+
+DeleteIcon.propTypes = {
+  completed: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
+
 
 export { DeleteIcon };

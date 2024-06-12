@@ -12,42 +12,13 @@
 }
 
 .TodoItem-p {
-  margin: 24px 0px 24px 60px;
+  margin: 28px 0px 24px 60px;
   width: calc(100% - 30px);
-  font-size: 1.3rem;
+  font-size: 2rem;
   line-height: 2.4rem;
   font-weight: 400;
 }
 
 .TodoItem-p--complete {
   text-decoration: line-through;
-}
-
-.Icon {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4.8rem;
-  width: 4.8rem;
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-
-.Icon-check {
-  position: absolute;
-  left: 1.2rem;
-}
-
-.Icon-check--active {
-  color: #70D25A;
-}
-
-.Icon-delete {
-  position: absolute;
-  right: 0;
-}
-
-.Icon-delete:hover {
-  color: red;
 }

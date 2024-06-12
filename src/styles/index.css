@@ -15,16 +15,20 @@ body {
     color: white;
     font-family: "Share Tech", Helvetica, sans-serif;
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
 }
 
 #root {
-  margin-top: 5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10rem;
   background-color: #1D1D1F;
   border-radius: 1.5rem;
   width: 50rem;
-  min-height: 50rem;
-  align-content: center;
+  min-height: 60rem;
+  box-sizing: border-box;
 }

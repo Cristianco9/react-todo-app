@@ -6,10 +6,10 @@ function TodoCounter({ total, completed }) {
 
     completed === total
       ? <h1 className="TodoCounter">
-          You Has been completed all TODOs
+          You has been completed all TODOs
       </h1>
       : <h1 className="TodoCounter">
-          You Has been completed <span>{completed} </span>
+          You has been completed <span>{completed} </span>
           of <span>{total}</span> TODOs
       </h1>
   );
