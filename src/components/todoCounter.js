@@ -3,10 +3,15 @@ import '../styles/todoCounter.css';
 
 function TodoCounter({ total, completed }) {
   return (
-    <h1 className="TodoCounter">
-      You Has been completed <span>{completed} </span>
-      of <span>{total}</span> TODOs
-    </h1>
+
+    completed === total
+      ? <h1 className="TodoCounter">
+          You Has been completed all TODOs
+      </h1>
+      : <h1 className="TodoCounter">
+          You Has been completed <span>{completed} </span>
+          of <span>{total}</span> TODOs
+      </h1>
   );
 }
 
@@ -14,5 +19,6 @@ TodoCounter.propTypes = {
   total: PropTypes.number.isRequired,
   completed: PropTypes.number.isRequired
 };
+
 
 export { TodoCounter };
