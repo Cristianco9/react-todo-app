@@ -1,4 +1,4 @@
-import { TodoIcon } from './todoIcon';
+import { TodoIcon } from './TodoIcon';
 import PropTypes from 'prop-types';
 
 function CompleteIcon({ completed, onComplete }) {

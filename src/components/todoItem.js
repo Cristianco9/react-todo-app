@@ -1,5 +1,5 @@
-import { CompleteIcon } from '../components/completeIcon';
-import { DeleteIcon } from '../components/deleteIcon';
+import { CompleteIcon } from './CompleteIcon';
+import { DeleteIcon } from './DeleteIcon';
 import PropTypes from 'prop-types';
 import '../styles/TodoItem.css';
 

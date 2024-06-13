@@ -1,14 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { TodoCounter } from '../components/todoCounter';
-import { TodoSearch } from '../components/todoSearch';
-import { TodoList } from '../components/todoList';
-import { TodoItem } from '../components/todoItem';
-import { CreateTodoButton } from '../components/createTodoButton';
-import { GradientBar1 } from '../components/gradientBar1';
-import { GradientBar2 } from '../components/gradientBar2';
-
-
+import { AppUI } from './AppUI';
 
 function App() {
 
@@ -41,29 +33,15 @@ function App() {
   };
 
   return (
-    <>
-      <GradientBar1 />
-      <TodoCounter completed={completedTodos} total={totalTodos}/>
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-
-      <TodoList>
-        {searchedTodos.map(todo => (
-          <TodoItem
-            key="{todo.text}"
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-      <GradientBar2 />
-
-      <CreateTodoButton />
-    </>
+    <AppUI
+      completedTodos={completedTodos}
+      totalTodos={totalTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeTodo={completeTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 
