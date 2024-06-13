@@ -1,12 +1,12 @@
 import React from 'react';
-import { useLocalStorage } from './hooks/useLocalStorage';
-import { TodoCounter } from './components/todoCounter';
-import { TodoSearch } from './components/todoSearch';
-import { TodoList } from './components/todoList';
-import { TodoItem } from './components/todoItem';
-import { CreateTodoButton } from './components/createTodoButton';
-import { GradientBar1 } from './components/gradientBar1';
-import { GradientBar2 } from './components/gradientBar2';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+import { TodoCounter } from '../components/todoCounter';
+import { TodoSearch } from '../components/todoSearch';
+import { TodoList } from '../components/todoList';
+import { TodoItem } from '../components/todoItem';
+import { CreateTodoButton } from '../components/createTodoButton';
+import { GradientBar1 } from '../components/gradientBar1';
+import { GradientBar2 } from '../components/gradientBar2';
 
 
 
