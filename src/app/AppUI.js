@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 
 function AppUI(
   {
+    loading,
+    error,
     completedTodos,
     totalTodos,
     searchValue,
@@ -28,6 +30,10 @@ function AppUI(
       />
 
       <TodoList>
+        {loading && <p>Loading content...</p>}
+        {error && <p>Cannot  load content...</p>}
+        {(!loading && searchedTodos.length == 0) && <p>Create the first TODO</p>}
+
         {searchedTodos.map(todo => (
           <TodoItem
             key="{todo.text}"
@@ -46,6 +52,8 @@ function AppUI(
 }
 
 AppUI.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
   completedTodos: PropTypes.string.isRequired,
   totalTodos: PropTypes.string.isRequired,
   searchValue: PropTypes.string.isRequired,
