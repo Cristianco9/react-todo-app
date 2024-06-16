@@ -7,24 +7,25 @@ function useLocalStorage(itemData, initialValue) {
   const [ error, setError ] = React.useState(false);
 
   React.useEffect(() => {
+    setTimeout(() => {
+      try {
+        const localStorageItem = localStorage.getItem(itemData);
+        let parsedItem;
 
-    try {
-      const localStorageItem = localStorage.getItem(itemData);
-      let parsedItem;
+        if (!localStorageItem) {
+          localStorage.setItem('TODO_V1', JSON.stringify(initialValue));
+          parsedItem = initialValue;
+        } else {
+          parsedItem = JSON.parse(localStorageItem);
+          setItem(parsedItem);
+        }
 
-      if (!localStorageItem) {
-        localStorage.setItem('TODO_V1', JSON.stringify(initialValue));
-        parsedItem = initialValue;
-      } else {
-        parsedItem = JSON.parse(localStorageItem);
-        setItem(parsedItem);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+        setError(true);
       }
-
-      setLoading(false);
-    } catch (err) {
-      setLoading(false);
-      setError(true);
-    }
+    }, 5000);
   }, []);
 
   const saveItem = (newItem) => {
