@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import '../styles/TodosLoading.css';
 
 function TodosLoading() {
@@ -12,9 +11,5 @@ function TodosLoading() {
     </section>
   );
 }
-
-TodosLoading.propTypes = {
-  searchValue: PropTypes.string.isRequired,
-};
 
 export { TodosLoading };

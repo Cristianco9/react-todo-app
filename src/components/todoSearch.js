@@ -1,7 +1,13 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import '../styles/TodoSearch.css';
+import { TodoContext } from '../context/TodoContext';
 
-function TodoSearch( { searchValue, setSearchValue } ) {
+function TodoSearch() {
+
+  const {
+    searchValue,
+    setSearchValue
+  } = React.useContext(TodoContext);
 
   return (
     <input
@@ -16,10 +22,5 @@ function TodoSearch( { searchValue, setSearchValue } ) {
     />
   );
 }
-
-TodoSearch.propTypes = {
-  searchValue: PropTypes.string.isRequired,
-  setSearchValue: PropTypes.func.isRequired
-};
 
 export { TodoSearch };
