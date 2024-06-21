@@ -1,16 +1,21 @@
+import PropTypes from 'prop-types';
 import '../styles/createTodoButton.css';
 
-function CreateTodoButton() {
+function CreateTodoButton({ setOpenModal }) {
   return (
     <button
       className="createTodoButton"
       onClick={
-        (/*event*/) => {
-
+        () => {
+          setOpenModal(state => !state);
         }
       }
     >+</button>
   );
 }
+
+CreateTodoButton.propTypes = {
+  setOpenModal: PropTypes.func.isRequired,
+};
 
 export { CreateTodoButton };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import PropTypes from 'prop-types';
 
 const TodoContext =  React.createContext();
 
@@ -12,6 +13,7 @@ function TodoProvider({ children }) {
     error
   } = useLocalStorage('TODO_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
+  const [openModal, setOpenModal] = React.useState(false);
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -48,11 +50,17 @@ function TodoProvider({ children }) {
       setSearchValue,
       searchedTodos,
       completeTodo,
-      deleteTodo
+      deleteTodo,
+      openModal,
+      setOpenModal,
     }}>
       {children}
     </TodoContext.Provider>
   );
 }
+
+TodoProvider.propTypes = {
+  children: PropTypes.func.isRequired,
+};
 
 export { TodoContext, TodoProvider };

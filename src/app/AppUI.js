@@ -5,10 +5,12 @@ import { TodoList } from '../components/TodoList';
 import { TodosLoading } from '../components/TodosLoading';
 import { TodosEmpty } from '../components/TodosEmpty';
 import { TodoItem } from '../components/TodoItem';
-import { TodoContext } from '../context/TodoContext';
+import { TodoForm } from '../components/TodoForm';
 import { CreateTodoButton } from '../components/CreateTodoButton';
 import { GradientBar1 } from '../components/GradientBar1';
 import { GradientBar2 } from '../components/GradientBar2';
+import { Modal } from '../modal';
+import { TodoContext } from '../context/TodoContext';
 
 function AppUI() {
 
@@ -17,7 +19,9 @@ function AppUI() {
     error,
     searchedTodos,
     completeTodo,
-    deleteTodo
+    deleteTodo,
+    openModal,
+    setOpenModal,
   } = React.useContext(TodoContext);
 
   return (
@@ -49,7 +53,15 @@ function AppUI() {
 
       <GradientBar2 />
 
-      <CreateTodoButton />
+      <CreateTodoButton
+        setOpenModal={setOpenModal}
+      />
+
+      {openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
     </>
   );
 }
