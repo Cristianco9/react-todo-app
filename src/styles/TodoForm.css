@@ -1,7 +1,8 @@
 form {
-  width: 90%;
+  width: 50rem;
   max-height: 30rem;
-  background-color: #fff;
+  background-color: black;
+  border-radius: 2rem;
   padding: 3.3rem 4rem;
   display: flex;
   justify-content: center;
@@ -13,60 +14,58 @@ label {
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
-  color: #000;
+  color: white;
   margin-bottom: 2.6rem;
 }
 
 textarea {
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 2px;
+  background-color: #1D1D1F;
+  border: 2px solid #ffffff;
+  border-radius: 2rem;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  color: #000;
+  color: aqua;
   font-size: 2rem;
   text-align: center;
   padding: 1.2rem;
   height: 9.6rem;
-  width: calc(100% - 2.5rem);
-
+  min-width: calc(100% - 2.5rem);
 }
 
 textarea::placeholder {
-  color: #A5A5A5;
+  color: aqua;
   font-family:  "Share Tech", Helvetica, sans-serif;
   font-weight: 400;
 }
 
 textarea:focus {
-  outline-color: #61DAFA;
+  outline-color: #EE7130;
 }
 
 .TodoForm-buttonContainer {
-  margin-top: 1.4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 2.5rem);
 }
 
 .TodoForm-button {
   cursor: pointer;
   display: inline-block;
   font-size: 2rem;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   width: 12rem;
   height: 4.8rem;
-  border-radius: 2px;
+  border-radius: 1rem;
   border: none;
   font-family:  "Share Tech", Helvetica, sans-serif;
 }
 
-.TodoForm-button-add {
-  background: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+.TodoForm-button--add {
+  background: #F3C224;
 }
 
 .TodoForm-button--cancel {
-  background: transparent;
+  background: #E94926;
 }

@@ -11,7 +11,7 @@ function TodoSearch() {
 
   return (
     <input
-      placeholder="Learn React.js"
+      placeholder="Search TODOs"
       className='TodoSearch'
       value={searchValue}
       onChange={
