@@ -57,7 +57,7 @@ Make sure you have the following installed on your machine:
 
 To start the development server and run the project, use the following command:
 
-   ```sh
+1.   ```sh
     npm run start
 
 This will start the React development server and open the app in your default
