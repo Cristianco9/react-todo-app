@@ -53,45 +53,38 @@ Make sure you have the following installed on your machine:
    ```sh
     cd react-todo-app
 
+
+3. To start the development server and run the project, use the following command:
+
+   ```sh
+    npm run start
+
 ### Usage
 
-To start the development server and run the project, use the following command:
-
-\`\`\`sh
-npm run start
-\`\`\`
-
-This command will launch the React development server and automatically open the
-app in your default web browser. From there, you can start adding, editing, and
-managing your tasks effectively.
+This will start the React development server and open the app in your default
+web browser. You can now begin adding, editing, and managing your tasks.
 
 ## Contributing
 
-Contributions are welcome and greatly appreciated. They help make the open-source
-community a vibrant place to learn, inspire, and create together. To contribute
-to this project, follow these steps:
+Contributions are what make the open-source community such an amazing place to
+learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-1. Fork the repository
-2. Create a new branch for your feature (\`git checkout -b feature/AmazingFeature\`)
-3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)
-4. Push to the branch (\`git push origin feature/AmazingFeature\`)
-5. Open a Pull Request to merge your changes into the main branch
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE)
-file for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
+LinkedIn - [cristianco9](https://www.linkedin.com/in/cristianco9/)
 
-Feel free to reach out if you have any questions or feedback:
-
-- LinkedIn: [cristianco9](https://www.linkedin.com/in/cristianco9/)
-- Project Link: [GitHub](https://github.com/Cristianco9/react-todo-app)
+Project Link: [Github]
+(https://github.com/Cristianco9/react-todo-app)
 
 ---
 
-Please feel free to customize this template further to suit your preferences and
-include any additional information that you think would be valuable for users and
-contributors.
-
+Feel free to modify this template according to your preferences and add any
+additional information that you think might be useful for users and contributors.
