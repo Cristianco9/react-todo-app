@@ -3,7 +3,7 @@ import '../styles/TodosEmpty.css';
 function TodosError() {
 
   return (
-    <p>Error...</p>
+    <p className='message'>Error...</p>
   );
 }
 

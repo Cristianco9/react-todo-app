@@ -26,6 +26,15 @@ function TodoProvider({ children }) {
     }
   );
 
+  const addTodo = (text) => {
+    const newItem = [...todos];
+    newItem.push({
+      text,
+      completed: false,
+    });
+    saveTodos(newItem);
+  };
+
   const completeTodo = (text) => {
     const newItem = [...todos];
     const todoIndex = newItem.findIndex((todo) => todo.text == text);
@@ -40,6 +49,13 @@ function TodoProvider({ children }) {
     saveTodos(newItem);
   };
 
+  const toggleTodo = (text) => {
+    const newItem = [...todos];
+    const todoIndex = newItem.findIndex((todo) => todo.text === text);
+    newItem[todoIndex].completed = !newItem[todoIndex].completed;
+    saveTodos(newItem);
+  };
+
   return (
     <TodoContext.Provider value={{
       loading,
@@ -49,8 +65,10 @@ function TodoProvider({ children }) {
       searchValue,
       setSearchValue,
       searchedTodos,
+      addTodo,
       completeTodo,
       deleteTodo,
+      toggleTodo,
       openModal,
       setOpenModal,
     }}>
@@ -60,7 +78,7 @@ function TodoProvider({ children }) {
 }
 
 TodoProvider.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export { TodoContext, TodoProvider };

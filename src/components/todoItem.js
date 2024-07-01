@@ -8,16 +8,19 @@ function TodoItem(props) {
     <li className="todoItem">
       <CompleteIcon
         completed={props.completed}
-        onComplete={props.onComplete}
+        onComplete={props.onToggle}
       />
 
-      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
+      <p
+        className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}
       </p>
 
       <DeleteIcon
         onDelete={props.onDelete}
       />
+
+      <hr className="styled-hr"></hr>
     </li>
   );
 }
@@ -25,7 +28,7 @@ function TodoItem(props) {
 TodoItem.propTypes = {
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
-  onComplete: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired
 };
 

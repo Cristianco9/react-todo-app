@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-/* setting rem measuare */
+/* setting rem measure */
 html {
   font-size: 62.5%;
   background-color: #1D1D1F;
@@ -31,5 +31,18 @@ body {
   border-radius: 1.5rem;
   width: 50rem;
   min-height: 60rem;
+  height: 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 350px) {
+  #root {
+    width: calc(100% - 3rem)
+  }
+}
+
+@media (min-width: 550px) {
+  #root {
+    width: 50rem;
+  }
 }

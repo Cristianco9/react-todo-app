@@ -10,8 +10,9 @@
 }
 
 .Icon-container-check {
+  display: flex;
   position: absolute;
-  left: 1.2rem;
+  margin: -1.4rem 0 0 2rem;
 }
 
 .Icon-container-check--active {
@@ -19,8 +20,9 @@
 }
 
 .Icon-container-delete {
+  display: flex;
   position: absolute;
-  right: 0;
+  margin: -4.2rem 0 0 43rem;
 }
 
 .Icon-container-delete:hover {

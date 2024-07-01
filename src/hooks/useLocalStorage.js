@@ -17,23 +17,25 @@ function useLocalStorage(itemData, initialValue) {
           parsedItem = initialValue;
         } else {
           parsedItem = JSON.parse(localStorageItem);
-          setItem(parsedItem);
         }
 
+        setItem(parsedItem);
         setLoading(false);
       } catch (err) {
         setLoading(false);
         setError(true);
       }
     }, 1000);
-  }, []);
+  }, [itemData, initialValue]);
 
   const saveItem = (newItem) => {
-
-    let newItemStringified = JSON.parse(newItem);
-    localStorage.setItem('TODO_V1', newItemStringified);
-    setItem(newItem);
-
+    try {
+      const newItemStringified = JSON.stringify(newItem);
+      localStorage.setItem('TODO_V1', newItemStringified);
+      setItem(newItem);
+    } catch (err) {
+      setError(true);
+    }
   };
 
   return { item, saveItem, loading, error };
