@@ -53,8 +53,12 @@ Make sure you have the following installed on your machine:
    ```sh
     cd react-todo-app
 
+3. Install the development dependencies necessary to run the project:
 
-3. To start the development server and run the project, use the following command:
+   ```sh
+    npm run dev-dep
+
+4. To start the development server and run the project, use the following command:
 
    ```sh
     npm run start
