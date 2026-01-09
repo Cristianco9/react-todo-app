@@ -13,7 +13,7 @@ function TodoCounter() {
 
     completedTodos === totalTodos
       ? <h1 className="TodoCounter">
-          You has been completed all TODOs
+          You have completed all TODOs
       </h1>
       : <h1 className="TodoCounter">
           You has been completed <span>{completedTodos} </span>
